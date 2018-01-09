@@ -1,3 +1,29 @@
+#npm声明
+npm install query --save<br/>
+npm install bootstrap --save<br/>
+npm install @types/query --save-dev<br/>
+
+#包声明
+
+##新建proxy.conf.json文件
+
+###内容
+{
+  "/search":{
+    "target":"http://59.71.36.18:5000"
+  },
+  "/api":{
+    "target":"http://59.71.36.18:5400"
+  }
+}
+###解释
+对于所有http请求，以/search开头的会请求http://59.71.36.17:5000<br/>
+对于所有http请求，以/api开头的会请求http://59.71.36.18:5400
+
+##package.json
+"start": "ng serve --proxy-config proxy.conf.json",
+
+
 # Blog
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.0.
