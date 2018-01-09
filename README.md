@@ -17,7 +17,7 @@ npm install @types/query --save-dev<br/>
     "target":"http://59.71.36.18:5400"
   }
 }
-<pre>
+</pre>
 
 ### 解释
 对于所有http请求，以/search开头的会请求http://59.71.36.17:5000<br/>
